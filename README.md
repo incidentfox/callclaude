@@ -8,7 +8,7 @@ I run a bunch of Claude Code sessions on my laptop and lose track of which termi
 
 ## How it works
 
-You get a phone number via Retell AI. When you call it, Retell does speech-to-text, sends the text to Claude Sonnet which decides what tool to call, and hits your bridge server through an ngrok tunnel. The bridge server runs on your Mac and translates tool calls into `claude-sessions` CLI commands — which find the right Terminal.app tab by tty device path, inject keystrokes via AppleScript, and watch the JSONL conversation file with kqueue for the response. Everything runs locally. Retell only sees tool call names and results.
+You get a phone number via [Retell AI](https://www.retellai.com/) (also works with [Vapi](https://vapi.ai/)). When you call it, Retell does speech-to-text, sends the text to [Claude Sonnet](https://docs.anthropic.com/en/docs/about-claude/models) which decides what tool to call, and hits your bridge server through an [ngrok](https://ngrok.com/) tunnel. The bridge server runs on your Mac and translates tool calls into `claude-sessions` CLI commands — which find the right Terminal.app tab by tty device path, inject keystrokes via AppleScript, and watch the JSONL conversation file with macOS kqueue for the response. Everything runs locally. Retell only sees tool call names and results.
 
 ```
 Your phone → Retell AI (STT + LLM) → ngrok → bridge server → claude-sessions → Terminal.app → Claude Code
@@ -29,7 +29,7 @@ Fire up [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and paste:
 Clone https://github.com/incidentfox/callclaude.git into ~/development/, read the CLAUDE.md, run setup.sh, then walk me through the full setup. I want to manage my Claude Code sessions from my phone by the end of this.
 ```
 
-Requires macOS, tmux, ngrok, Node.js 18+, Claude Code CLI.
+Requires macOS, [tmux](https://github.com/tmux/tmux), [ngrok](https://ngrok.com/), Node.js 18+, [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code).
 
 ## License
 

@@ -1,4 +1,4 @@
-# Claude Orchestrator
+# CallClaude
 
 **Talk to your local Claude Code sessions from your phone. No cloud. No UI. Just a phone call.**
 
@@ -6,7 +6,7 @@
 
 You're running 5+ Claude Code sessions on your laptop. You close the lid and have no idea what's happening. You open it back up and can't remember which terminal is doing what. You want to check on them from your car but there's no way to reach your local machine from your phone.
 
-We solved it with a phone number. Call it, say "what's running," get an answer. Say "tell the forta session to check the build" and it types that into the right terminal on your Mac. No cloud-hosted agents, no fancy UI, no app store review process — just a phone call that reaches your local Claude Code sessions through an ngrok tunnel.
+We solved it with a phone number. Call it, say "what's running," get an answer. Say "tell the main session to check the build" and it types that into the right terminal on your Mac. No cloud-hosted agents, no fancy UI, no app store review process — just a phone call that reaches your local Claude Code sessions through an ngrok tunnel.
 
 Why a phone call? Because I drive a Tesla and I didn't want to deal with getting an app approved for the Tesla browser. You know what works in every car? The phone.
 
@@ -27,7 +27,7 @@ Why a phone call? Because I drive a Tesla and I didn't want to deal with getting
 Fire up [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and paste:
 
 ```
-Clone https://github.com/incidentfox/claude-orchestrator.git into ~/development/, read the CLAUDE.md, run setup.sh, then walk me through the full setup. I want to manage my Claude Code sessions from my phone by the end of this.
+Clone https://github.com/incidentfox/callclaude.git into ~/development/, read the CLAUDE.md, run setup.sh, then walk me through the full setup. I want to manage my Claude Code sessions from my phone by the end of this.
 ```
 
 That's it. Claude Code sets itself up.
@@ -38,9 +38,9 @@ That's it. Claude Code sets itself up.
 
 ```bash
 claude-sessions list -a                           # What's running?
-claude-sessions send forta "check build status"   # Talk to a session
-claude-sessions send forta "status?" -w           # Send + wait for response
-claude-sessions read forta -n 20                  # Read last 20 messages
+claude-sessions send myapp "check build status"   # Talk to a session
+claude-sessions send myapp "status?" -w           # Send + wait for response
+claude-sessions read myapp -n 20                  # Read last 20 messages
 claude-sessions start myproject ~/code/app -b     # New background session
 ```
 

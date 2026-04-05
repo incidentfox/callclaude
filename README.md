@@ -10,19 +10,17 @@ We solved it with a phone number. Call it, say "what's running," get an answer. 
 
 Why a phone call? Because I drive a Tesla and I didn't want to deal with getting an app approved for the Tesla browser. You know what works in every car? The phone.
 
-## Listen to a real call (2 min)
-
-[**demo-call.mp3**](https://github.com/incidentfox/claude-orchestrator/raw/main/demo-call.mp3)
+## What it sounds like
 
 > **Agent:** Hey. What's up?
 >
-> **Me:** What are the active sessions?
+> **You:** What sessions are running?
 >
-> **Agent:** Looks like you've got 6 active sessions running — forta, evolve, job search, and a couple others.
+> **Agent:** One sec! You've got 6 active sessions — a couple on projects, a few at the home directory.
 >
-> **Me:** Can you check what files are in my downloads folder?
+> **You:** Tell the main session to check the build status.
 >
-> **Agent:** I can send that command to one of your sessions — one sec!
+> **Agent:** Got it, sending that over now. Give it a moment and I'll check back for results.
 
 ## Install
 

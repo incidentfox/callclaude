@@ -2,7 +2,15 @@
 
 Control your Claude Code sessions from your phone.
 
-If you're running multiple Claude Code sessions — one on a refactor, one on tests, one researching docs — you're alt-tabbing between terminals to check on them. Close your laptop and you lose visibility entirely. This gives you a single control plane: a CLI to manage all sessions, a Telegram bot for quick check-ins, and a phone number you can call to list sessions, send commands, read responses, and spin up new work — all by voice while you're away from your desk.
+## Why
+
+I built this because I have a problem: I spin up Claude Code sessions in random terminals all day — one on a refactor, one researching something, one just answering a question I had — and within an hour I've lost track of what's running where. The context switching is brutal. I tried Conductor, Agent Deck, Orca, but their UIs confused me more than the terminals did. Half the time I don't even have a repo, I just fire up Claude Code in `~` and start asking it things.
+
+What I actually wanted was simple: all my Claude Code sessions talking to each other, a way to check on them without being at my laptop, and the ability to keep long-running agents working while I'm away. The dream is an always-on orchestrator that spawns subagents, keeps them on task for hours, and reports back — haven't fully cracked that yet, but this is the infrastructure for it.
+
+The voice agent part came from driving. I'm stuck in traffic on FSD, bored, and I want to talk to my Claude Code sessions — check if they're still working, give them new instructions, explore ideas. Every other voice AI I tried (looking at you, Grok) hallucinates constantly. This one calls real tools and talks to real sessions.
+
+The whole thing is held together by an [AppleScript keystroke injection hack](bin/claude-sessions) that sends messages to Terminal.app tabs by matching tty device paths. It's cursed and it works.
 
 ```
 Phone Call → Retell AI → ngrok → Bridge Server → claude-sessions → Claude Code

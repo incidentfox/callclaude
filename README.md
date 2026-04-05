@@ -1,6 +1,6 @@
 # CallClaude
 
-Talk to your local Claude Code sessions from your phone.
+Call your local Claude Code sessions. Literally, from a phone call.
 
 ## Why
 

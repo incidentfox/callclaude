@@ -8,22 +8,28 @@ Telegram   → Claude Code Plugin → Orchestrator Session
 Terminal   → claude-sessions CLI → Claude Code
 ```
 
-## Quick Start
+## Install
+
+Fire up [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and paste this:
+
+```
+Clone https://github.com/incidentfox/claude-orchestrator.git into ~/development/, read the CLAUDE.md, run setup.sh, then walk me through the full setup including getting a Retell AI API key and creating the voice agent. I want to manage Claude Code sessions from my phone and Telegram by the end of this.
+```
+
+That's it. Claude Code will clone the repo, install everything, and walk you through the rest.
+
+### Manual Setup
 
 ```bash
-# Clone and run setup
-git clone <this-repo>
+git clone https://github.com/incidentfox/claude-orchestrator.git
 cd claude-orchestrator
 bash setup.sh
 
-# Edit .env with your API keys
-# Then:
+# Edit .env with your API keys, then:
 ngrok http 3456                    # Terminal 1
 node bridge/server.js              # Terminal 2
 node scripts/setup-retell.js       # One-time: creates voice agent + phone number
 ```
-
-Or just open this repo in Claude Code and say "set me up."
 
 ## What You Get
 

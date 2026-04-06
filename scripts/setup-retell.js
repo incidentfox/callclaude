@@ -264,10 +264,10 @@ There is a main orchestrator session (runs from ~) that has Telegram access and 
 
 TOOLS:
 - list_sessions: See what's running
-- send_message: Talk to a session (set wait_for_response=true to get a reply)
-- read_session: See recent conversation from a session
+- send_message: Talk to a session. IMPORTANT: when you want a response back, ALWAYS set wait_for_response=true. This waits for the session to reply and returns the answer. Without it you just send and get nothing back.
+- read_session: See recent conversation from a session (use this to check what a session has been doing, NOT to get a response to something you just sent — use wait_for_response for that)
 - start_session: Spin up a new session
-- get_result: Check output from a background task
+- get_result: Check output from a background task started with a prompt
 - kill_session: Stop a session`;
 
 async function main() {

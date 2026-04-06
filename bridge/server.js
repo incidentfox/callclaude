@@ -258,6 +258,9 @@ app.post("/retell/webhook", async (req, res) => {
         role: t.role,
         content: t.content,
         words: t.words?.length || 0,
+        // Preserve word-level timestamps for latency analysis
+        first_word_ts: t.words?.[0]?.start,
+        last_word_ts: t.words?.[t.words.length - 1]?.end,
       }));
 
       fs.writeFileSync(
@@ -288,6 +291,13 @@ app.post("/retell/webhook", async (req, res) => {
       console.log(
         `[retell-webhook] Call ended. Reason: ${call?.disconnection_reason}`
       );
+      // Read the last live transcript snapshot (has per-turn timestamps)
+      let detailedTranscript = [];
+      try {
+        const live = JSON.parse(fs.readFileSync(LIVE_TRANSCRIPT_FILE, "utf-8"));
+        detailedTranscript = live.transcript || [];
+      } catch {}
+
       const callId = call?.call_id || "unknown";
       const filepath = path.join(TRANSCRIPTS_DIR, `retell_${callId}.json`);
       fs.writeFileSync(
@@ -299,6 +309,7 @@ app.post("/retell/webhook", async (req, res) => {
             timestamp: new Date().toISOString(),
             duration: (call?.duration_ms || 0) / 1000,
             transcript: call?.transcript || "",
+            transcript_detailed: detailedTranscript,
             recording: call?.recording_url || "",
             disconnection_reason: call?.disconnection_reason,
           },

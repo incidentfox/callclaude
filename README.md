@@ -14,7 +14,7 @@ Requires macOS, [tmux](https://github.com/tmux/tmux), [ngrok](https://ngrok.com/
 
 ## Demo (real call, ~1 min)
 
-<video src="https://github.com/incidentfox/callclaude/raw/main/demo.mp4" controls width="100%"></video>
+[Listen to the demo call](https://github.com/incidentfox/callclaude/raw/main/demo.mp4) — asking the voice agent to check session status and look up a repo.
 
 ## Why
 

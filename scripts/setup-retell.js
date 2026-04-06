@@ -289,7 +289,7 @@ async function main() {
   const agent = await retellAPI("POST", "/create-agent", {
     agent_name: "CallClaude",
     response_engine: { type: "retell-llm", llm_id: llm.llm_id },
-    voice_id: "11labs-Brian",
+    voice_id: "11labs-Lily",
     language: "en-US",
     webhook_url: EVENTS_WEBHOOK,
     post_call_analysis_data: [

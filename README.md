@@ -13,10 +13,8 @@ Clone https://github.com/incidentfox/callclaude.git into ~/development/, read th
 Requires macOS, [tmux](https://github.com/tmux/tmux), [ngrok](https://ngrok.com/), Node.js 18+, [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code).
 
 ## Demo (real call, ~1 min)
-
+I called the agent over the phone and recorded my claude code terminal in the meantime. It relayed commands to the terminal and understood the outputs.
 https://github.com/user-attachments/assets/9514e65d-3f81-4f93-9f16-83522bbbf8e3
-
-
 
 
 ## Why

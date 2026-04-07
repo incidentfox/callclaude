@@ -1,6 +1,6 @@
 # CallClaude
 
-**[:gb: English](#install)** | **[:cn: 简体中文](#zh-简体中文)**
+**[:gb: English](#install)** | **[:cn: 简体中文](#chinese)**
 
 > Call your local Claude Code sessions. Literally, from a phone call.
 
@@ -102,7 +102,7 @@ MIT — built by [@incidentfox](https://github.com/incidentfox)
 
 ---
 
-# :cn: 简体中文
+<h1 id="chinese">:cn: 简体中文</h1>
 
 ## 这是啥
 
